@@ -1,53 +1,208 @@
-https://codepen.io/stumble_crawl/pen/dyYmpQL
+﻿https://codepen.io/stumble_crawl/pen/dyYmpQL
+
 <!-- Questions to Submit in today's file first-lastname.txt --> 
 <!--
 Copy the questions below into the first-lastname.txt file on your github repo - answer each question and then push your changes. 
 
     1. What is Semantic HTML? 
+
+Semantic HTML are tags like <h1>, <p>, <section>, etc. that provide meaning to markup. You can read the tag and know instantly what it does.
+
     2. What is HTML used for? 
+
+HTML is used to tell a browser what to do with text.
+
     3. What is an attribute and where do we put it? 
-    4. What is the h1 tag used for? How many times should I use it on a page?
-    5. Name two tags that have required attributes
+
+Attributes are used to provide additional information about an element. They are placed after the element name and inside the brackets of the starting tag in the pair.
+
+    4. What is the h1 tag used for? How many times should I use it on a page? 
+
+The h1 tag is used to define the most important heading on a page. It should only be used once on a page.
+
+    5. Name two tags that have required attributes  
+
+<img> and <a>
+
     6. What do we put in the head of our HTML document? 
+
+The head tag contains specific information about the web page like the title, fonts used, scripts, etc. 
+
     7. What is an id? 
+
+An id is used to specify a unique id for an HTML element.
+
     8. What elements can I add an id to? 
+
+The id attribute can be used on any HTML element.
+
     9. How many times can I use the same id on a page? 
+
+Once. 
+
     10. What is a class? 
+
+A class is used to define styles for one or more elements with the same class name.
+
     11. What elements can I add a class to? 
+
+Any element.
+
     12. How many times can I use the same class on a page? 
-    13. How do I get my link to open in a new tab?
+
+You can use the same class multiple times on a page. Theoretically, as many times as you want. 
+
+    13. How do I get my link to open in a new tab? 
+
+In an <a> tag set the target attribute to "_blank".   e.g. <a href="www.google.com" target="_blank">Google</a>
+
     14. What is the alt attribute in the image tag used for? 
-    15. How do I reference an id?
-    16. What is the difference between a section and a div
+
+The alt attribute provides alternate text for an image if the image can't be displayed or seen by the user. It is an accessibility feature.
+
+    15. How do I reference an id? 
+
+To reference an id in CSS use # followed the id name- #id
+
+    16. What is the difference between a section and a div? 
+
+Sections and divs are both used to divide HTML content up. A section is semantic and should be used to group related parts together, a div should be used to group parts for styling.
+
     17. What is CSS used for? 
-    18. How to we select an element? Example - every h2 on the page
-    19. What is the difference between a class and an id? - Give me an example of when I might use each one
-    20. How do we select classes in CSS?
-    21. How do we select a p element with a single class of “human””?
+
+CSS is used to provide style to marked up HTML. It can provide color, fonts other than the default, change shapes and positioning of elements and change the way pages appear on different devices.
+
+    18. How to we select an element? Example - every h2 on the page. 
+
+You select an element by referencing the tag name. For example, for an <h2> tag you would use `h2`.
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one. 
+
+A class is a group of elements that will all have the same style assigned to them. You may want all <p>’s to have the same font type, line spacing, margins, etc. An id is a specific element that will have its own style. You might use an id on a unique element or when you want the styling of the id element to override and previously set styling, like one paragraph out of many that you would like to be different. 
+
+    20. How do we select classes in CSS? 
+
+You select classes with “.” followed by the class name- .class
+
+    21. How do we select a p element with a single class of “human””? 
+
+<p class=”human></p>
+
     22. What is a parent child selector? When would this be useful? 
-    23. How do you select all links within a div with the class of sidebar?
-    24. What is a pseudo selector?
-    25. What do we use the change the spacing between lines?
-    26. What do we use to change the spacing between letters?
+
+A parent child selector takes the form of ”parent” “child”{}. Example: div a {} would select all divs that contained <a> tags. It allows for more specificity when styling. It would be useful if you wanted one or more elements out of many to have specific styling.
+
+    
+
+23. How do you select all links within a div with the class of sidebar?  
+
+.sidebar a {}
+
+    24. What is a pseudo selector? 
+
+A pseudo selector is used when you don’t have a set number of elements but want to style them individually. 
+
+    25. What do we use the change the spacing between lines?  
+
+line-height: 
+
+    26. What do we use to change the spacing between letters?  
+
+letter-spacing: 
+
     27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
-    28. How do I add a 1px border around my div that is dotted and black?
+ 
+text-transform: uppercase;` and `text-transform: lowercase;
+
+    28. How do I add a 1px border around my div that is dotted and black? 
+
+Border: 1 px dotted black;
+
     29. How do I select everything on the page? 
-    30. How do I write a comment in CSS?
-    31. How do I find out what file I am in, when I am using the command line? 
+
+Use the universal selector `*`
+
+    30. How do I write a comment in CSS? 
+
+/* comment here */
+
+    31. How do I find out what file I am in, when I am using the command line?
+
+`pwd` 
+
     32. Using the command line - how do I see a list of files/folders in my current folder?
+
+`ls`
+
     33. How do I remove a file via the command line? Why do I have to be careful with this? 
+
+`rm`  rm completely removes the file without prompting. You can use rm -i (interactive) to remove a file with a prompt.
+
     34. Why should I use version control? 
-    35. How often should I commit to github?
-    36. What is the command we would use to push our repo up to github? 
+
+Version control allows you to see changes you’ve made to a file over time and revert to a previously working state if you break something with a change. It also allows multiple team members to work on a file at the same time.
+
+    35. How often should I commit to github? 
+
+Whenever you make a significant change: add a feature, complete an edit, etc. Probably more often than you think about it.
+
+    36. What is the command we would use to push our repo up to github? `Git push -u origin firstname-lastname`. This will push to my branch of the forked repo. When working on my own projects I use git push -u origin master.
+
     37. Walk me through Lambda's git flow. 
+
+1. Create a fork of the repo on Github by clicking on the “Fork” button on the repo’s main page.
+
+2. Add your TL, and others if needed as a collaborator. Settings>Manage Access>Invite a collaborator.
+
+3. Clone the repo. Click the green “Clone or download” button and copy the link (I use ssh so I select the ssh one). On the command line navigate to the directory where you want to clone the repo (`cd <directory name>`) and type `git clone <copied link>`
+
+4. Create a branch of the forked repo with `git checkout -b ‘firstname-lastname’`
+
+5. Add files to your branch if needed, or work on the files within the branch. 
+
+6. After modifications are made add the files using `git add <filename>`. Then commit the files using `git commit -m “pertinent comment about changes”`
+
+7. Push the files back upstream using `git push -u origin ‘firstname-lastname’`
+
+8. Submit a pull request on Github to submit your work and have it reviewed- New pull request>change base repository to your branch> add reviewers by clicking on “reviewers” setting and choosing your TL (or TL’s)>add comments to request>click “create pull request”.
+
+
+
 
 Stretch Questions
 
-    1. What is the difference between an inline element and a block element?
+    1. What is the difference between an inline element and a block element? 
+
+A block element always starts on a new line and takes up as much width as possible. An inline element does not start on a new line and only takes up as much width as is necessary.
+
+
     2. What happens when an element is positioned absolutely? 
-    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+
+When an element is placed absolutely it will remain at a fixed location on the page defined by it’s top, left, bottom and right attributes unless it has a parent element and then it will remain fixed in relation to that element.
+
+
+
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?  
+
+Set the width property to “auto” – `width: auto`
+
+
+
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+
+Display block- <div>, <h1>-<h6>, <header>
+Display inline- <span>, <a>
+Display inline-block- <textarea>
+
     5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+
+The box model is a way of containing HTML content. It applies margins, borders and padding around the content. The values of margins borders and padding can be zero but are mostly used to position content relative to other content on the page. Padding clears an area around the element. Borders can be visible or not and clear a defined space around the padding. A margin clears space outside of the border. By adjusting each item in the “box” you can precisely position your element.
+
+In the traditional box model when we give an element a dimension it will include the borders and padding in that dimension. Example- we want our paragraph to be 200px wide. In the traditional model after setting our dimensions the paragraph will be rendered 200px + border dimension + padding dimension, so your paragraph would be displayed larger than the height or width you set.
+
+The fix for this is to use the box-sizing property with a value of border-box - `box-sizing: border-box;’ . The box-sizing property lets us include the padding and border in the dimension. If you use the border-box value then the content, padding and border are included in the dimension. If you do not use the border-box value the default value of content-box is used and this includes only the content and will render the element in the traditional box model way.
+
+
 
 
 
